@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Past Whiskey Pricees
+        </title>     
+    </head>
+    <body>
+        <form action="FindPrice" method="GET">
+            <fieldset>
+              <label for = "Currency">Currency type:</label>
+              <select id = "Currency" name = "Currency">
+                  <option value="PLN">Poland Złoty</option>
+                  <option value="EUR">European Euro</option>
+                  <option value="USD">U.S. Dollar</option>
+                  <option value="GBP">British Pound</option>
+                  <option value="CAD">Canadian Dollar</option>
+                  <option value="JPY">Japanese Yen</option>
+                  <option value="CHF">Swiss Franc</option>
+                  <option value="AUD">Australian Dollar</option>
+                  <option value="ZAR">South African Rand</option>
+              </select>
+              <br />
+              <label for = "slug">Auction House</label>
+              <select id ="slug" name = "slug">
+                <option value="catawiki">Catawiki Whisky Auction</option>
+                <option value="global-whisky-auctions">Global Whisky Auctions</option>
+                <option value="irish-whiskey-auctions">Irish Whiskey Auctions</option>
+                <option value="just-whisky">Just Whisky Auctions</option>
+                <option value="mctears">McTear’s Whisky Auction</option>
+                <option value="rumauctioneer">Rum Auctioneer</option>
+                <option value="scotchwhiskyauctions">Scotch Whisky Auctions</option>
+                <option value="speyside-whisky-auctions">Speyside Whisky Auctions</option>
+                <option value="thegrandwhiskyauction">The Grand Whisky Auction</option>
+                <option value="the-whisky-shop-auctions">The Whisky Shop Auctions</option>
+                <option value="unicorn-auctions">Unicorn Auctions</option>
+              </select>	
+              <br />
+              <input type = "submit" />
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+title Whisky Hunter and Currency Scoop by Jarosław Rybak
+
+User->Server:**GET** Contaning Currency(Selected) and slug(Name of the Auction house selected) via FindPrice
+Server->Whisky Hunter:**GET** to endpoint /auction_data/{slug}/
+Whisky Hunter->Server: **200 OK**:Raw dat in the from of a JSON stream of the last suctions on the database
+note over Server, Currency Scoop: Yes this happens 3 times because I'm changing 3 for each object from Whisky Hunter
+Server->Currency Scoop:**GET** to endpoint /convert contaning the apikey, from(orignal currency), to(new currency), and amount(value to be converted)
+Currency Scoop->Server:**200 OK: **Raw dat in the from of a JSON stream this includes the converted value
+Server->Currency Scoop:**GET** to endpoint /convert contaning the apikey, from(orignal currency), to(new currency), and amount(value to be converted)
+Currency Scoop->Server:**200 OK: ****200 OK: **Raw dat in the from of a JSON stream this includes the converted value
+Server->Currency Scoop:**GET** to endpoint /convert contaning the apikey, from(orignal currency), to(new currency), and amount(value to be converted)
+Currency Scoop->Server:**200 OK: **Raw dat in the from of a JSON stream this includes the converted value
+Server->User:**Responds 200 OK:** with a html code that has the requested converted data
